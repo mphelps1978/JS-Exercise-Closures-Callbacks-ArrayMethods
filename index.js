@@ -145,9 +145,12 @@ const inputNumber = num3 => {
  * "lady gaga" and `['foo', 'bar']` and `(bool) => bool ? 'nice!' : 'sad'`,
  * should return "sad".
  */
-function processContains(/* CODE HERE */) {
-  /* CODE HERE */
+function processContains(item, list, callback) {
+  return callback(list.includes(item));
 }
+const result = Boolean => {
+  return result;
+};
 
 /**
  * ### Challenge `processDuplicateFree`
@@ -190,8 +193,12 @@ function processDuplicateFree(/* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS
  * @returns an array with all the runners' full names in the following format: "Smith, John".
  * The full names appear in the array in the same order the runners appear in the `runners` array.
  */
-function getFullNames(/* CODE HERE */) {
-  /* CODE HERE */
+let runnersNames = [];
+function getFullNames(runners) {
+  runners.forEach(function(items) {
+    runnersNames.push(`${items.last_name}, ${items.first_name}`);
+  });
+  return runnersNames;
 }
 
 /**
