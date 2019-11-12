@@ -68,12 +68,6 @@ const length = num1 => {
  * Invoking `processLastItem` passing `['foo', 'bar']` and `(str) => str + str`,
  * should return 'barbar'.
  */
-// create HOF - processLastItem with 2 params, stringList and Callback
-
-//return callback with last element in stringlist
-
-//call HOF passing an array and
-
 function processLastItem(stringList, callback) {
   return callback(stringList[stringList.length - 1]);
 }
@@ -97,9 +91,14 @@ const someFunction = str => {
  * [2] Invoking `processSum` passing `[]` and `(num) => num + 1000`,
  * should return 1000.
  */
-function processSum(/* CODE HERE */) {
-  /* CODE HERE */
+// create HOF: processSum that takes in numberlist and callback
+function processSum(numberList, callback) {
+  //callback should take the array and add all the elements
+  return callback(numberList.reduce((a, b) => a + b, 0));
 }
+const number = num => {
+  return num;
+};
 
 /**
  * ### Challenge `processProduct`
