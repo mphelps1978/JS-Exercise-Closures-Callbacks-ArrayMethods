@@ -285,14 +285,6 @@ function counterMaker() {
 
   return increment;
 }
-
-// BROKEN CODE STARTS
-// const count = 0;
-// function counter() {
-//   ++count;
-// }
-// BROKEN CODE ENDS
-
 /**
  * ### Challenge `counterMakerWithLimit`
  *
@@ -313,8 +305,21 @@ function counterMaker() {
  * counter() // should return 0
  * etc
  */
-function counterMakerWithLimit(/* CODE HERE */) {
-  /* CODE HERE */
+function counterMakerWithLimit(maxValue) {
+  var count = -1;
+
+  return () => {
+    if (count < maxValue) {
+      count = count + 1;
+    } else {
+      count = 0;
+    }
+    return count;
+  };
+
+  let increment = counter();
+
+  return increment;
 }
 
 /////////////// END OF CHALLENGE ///////////////
